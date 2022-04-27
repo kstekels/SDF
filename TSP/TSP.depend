@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1650835284 source:c:\users\kstek\documents\developer\codeblock\tsp\main.cpp
+	<iostream>
+	<cmath>
+	<cstring>
+

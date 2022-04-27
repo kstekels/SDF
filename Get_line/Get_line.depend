@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1650834394 source:c:\users\kstek\documents\developer\codeblock\get_line\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+

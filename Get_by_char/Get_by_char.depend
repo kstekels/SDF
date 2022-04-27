@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1650834477 source:c:\users\kstek\documents\developer\codeblock\get_by_char\main.cpp
+	<iostream>
+	<fstream>
+
