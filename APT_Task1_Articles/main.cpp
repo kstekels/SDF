@@ -55,7 +55,7 @@ int main(void)
 	CommentsNode* firstComment = NULL;
 	CommentsNode* lastComment = NULL;
 
-    inFile = fopen("articles.i6", "r");
+    inFile = fopen("articles.in", "r");
 
     if (inFile == NULL){
         printf("Unable to open the file\n");
