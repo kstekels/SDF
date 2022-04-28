@@ -4,6 +4,7 @@
 struct TitleNode
 {
     int aTitleKey;
+    int titlesCount;
     char aTitleString[201];
     TitleNode* next;
 };
@@ -11,6 +12,7 @@ struct TitleNode
 struct CommentsNode
 {
     int aCommentKey;
+    int commentsCount;
     char aCommentString[30];
     CommentsNode* next;
 };
@@ -40,6 +42,8 @@ int main(void)
 
 	int aKey;
 	char aString[203];
+	int titleCounter = 0;
+	int commentCount = 0;
 
     // Titles Linked List
 	TitleNode* title = new TitleNode();
@@ -64,6 +68,7 @@ int main(void)
                 if (title->aTitleKey == 0)
                 {
                     title->aTitleKey = aKey;
+                    title->titlesCount = ++titleCounter;
                     for (int i = 1; i < sizeof(aString); ++i)
                     {
                         if (aString[i] == '\"')
@@ -77,6 +82,7 @@ int main(void)
                 else
                 {
                     title = new TitleNode();
+                    title->titlesCount = ++titleCounter;
                     title->aTitleKey = aKey;
 
                     for (int i = 1; i < sizeof(aString); ++i)
@@ -96,6 +102,7 @@ int main(void)
                 if (comment->aCommentKey == 0)
                 {
                     comment->aCommentKey = aKey;
+                    comment->commentsCount = ++commentCount;
                     for (int i = 0; i < sizeof(aString); ++i)
                     {
                         if (aString[i] == 0)
@@ -110,6 +117,7 @@ int main(void)
                 else
                 {
                     comment = new CommentsNode();
+                    comment->commentsCount = ++commentCount;
                     comment->aCommentKey = aKey;
 
                     for (int i = 0; i < sizeof(aString); ++i)
@@ -125,9 +133,41 @@ int main(void)
                 }
                 aKey = 0;
             }
-
         }
         fclose(inFile);
+
+        outFile = fopen("articles.out", "w+");
+
+        if (outFile == NULL)
+        {
+            printf("Unable to open the file\n");
+        } else {
+            title = firstTitle;
+            comment = firstComment;
+            for (int i = 0; i < lastTitle->titlesCount; ++i)
+            {
+                int commentsWrittenToFile = 0;
+                fprintf(stdout, "%s\n", title->aTitleString);
+                fprintf(outFile, "%s\n", title->aTitleString);
+                for (int j = 0; j < lastComment->commentsCount; ++j)
+                {
+                    if (title->aTitleKey == comment->aCommentKey)
+                    {
+                        fprintf(stdout, "%s ", comment->aCommentString);
+                        fprintf(outFile, "%s ", comment->aCommentString);
+                        ++commentsWrittenToFile;
+                    }
+                    comment = comment->next;
+                }
+                if (commentsWrittenToFile < 1)
+                    fprintf(outFile, "-");
+                fprintf(outFile, "\n");
+                fprintf(stdout, "\n");
+                title = title->next;
+                comment = firstComment;
+            }
+            fclose(outFile);
+        }
         printTitleList(firstTitle);
         printCommentList(firstComment);
     }
