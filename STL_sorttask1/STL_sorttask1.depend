@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1651309119 source:c:\users\kstek\documents\developer\codeblock\stl_sorttask1\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<time.h>
+

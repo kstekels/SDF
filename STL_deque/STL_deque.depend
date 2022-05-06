@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1651311324 source:c:\users\kstek\documents\developer\codeblock\stl_deque\main.cpp
+	<iostream>
+	<deque>
+	<algorithm>
+
