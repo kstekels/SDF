@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1652037764 source:c:\users\kstek\documents\developer\codeblock\lab_gg_test\lab_gg_test.cpp
+	<iostream>
+	"../Lab_GG/lab_G14.h"
+
+1652027374 c:\users\kstek\documents\developer\codeblock\lab_gg\lab_g14.h
+
+1652031588 source:c:\users\kstek\documents\developer\codeblock\lab_gg\lab_g14.cpp
+	"lab_G14.h"
+	<iostream>
+

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1652020210 source:c:\users\kstek\documents\developer\codeblock\formulatest\testmain.cpp
+	<iostream>
+	"../Formula/formula.h"
+
+1652001619 c:\users\kstek\documents\developer\codeblock\formula\formula.h
+
+1652001666 source:c:\users\kstek\documents\developer\codeblock\formula\formula.cpp
+	"formula.h"
+

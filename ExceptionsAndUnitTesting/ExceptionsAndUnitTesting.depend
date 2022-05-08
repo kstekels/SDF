@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1651997009 source:c:\users\kstek\documents\developer\codeblock\exceptionsandunittesting\formula.cpp
+	<iostream>
+
+1651997432 source:c:\users\kstek\documents\developer\codeblock\exceptionsandunittesting\formula2.cpp
+	<iostream>
+
+1651997411 source:c:\users\kstek\documents\developer\codeblock\exceptionsandunittesting\exceptions.cpp
+	<iostream>
+

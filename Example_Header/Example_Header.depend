@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1651945951 source:c:\users\kstek\documents\developer\codeblock\example_header\main.cpp
+	<iostream>
+	"Food.h"
+
+1651945889 source:c:\users\kstek\documents\developer\codeblock\example_header\food.cpp
+	<iostream>
+	"Food.h"
+
+1651945991 c:\users\kstek\documents\developer\codeblock\example_header\food.h
+
